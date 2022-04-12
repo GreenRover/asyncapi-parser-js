@@ -1169,6 +1169,13 @@ declare module "@asyncapi/parser" {
         applyTraits?: boolean;
     };
     /**
+     * Parses an AsyncAPI document from YAML or JSON to a unmodified plain js object.
+     * This can be used in case you want to preprocess the document hand over to parse()
+     * @param asyncapiYAMLorJSON - An AsyncAPI document in JSON or YAML format.
+     * @returns Plain js object
+     */
+    function toJS(asyncapiYAMLorJSON: string | any): any;
+    /**
      * Parses and validate an AsyncAPI document from YAML or JSON.
      * @param asyncapiYAMLorJSON - An AsyncAPI document in JSON or YAML format.
      * @param [options] - Configuration options object {@link ParserOptions}
